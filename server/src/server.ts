@@ -1,9 +1,7 @@
-import express from "express";
 import http from "http";
+import app from "./app";
 
 const PORT = process.env.PORT as unknown as number;
-
-const app = express();
 
 const server = http.createServer(app);
 server.listen(PORT, () => {
