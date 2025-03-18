@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
-import { planets } from "../../models/planets/planets.model";
+import { habitablePlanets } from "../../models/planets/planets.model";
+
+const planets = habitablePlanets;
 
 export const planetsController = {
   getAllPlanets(req: Request, res: Response) {
