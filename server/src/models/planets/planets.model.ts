@@ -31,7 +31,6 @@ export function loadPlanetsData() {
         .on("data", (data: PlanetDataType) => {
           if (isHabitable(data)) {
             habitablePlanets.push(data);
-            console.log(data);
           }
         })
         .on("error", (error: unknown) => {
