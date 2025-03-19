@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { launches } from "../../models/launches/launches.model";
+import { launchesService } from "../../service/launches.service";
 
 export const launchesController = {
   getAllLaunches(req: Request, res: Response) {
-    res.status(200).json(Array.from(launches.values()));
+    res.status(200).json(launchesService.parseLaunches);
   },
 };
