@@ -1,5 +1,6 @@
 import express from "express";
 import routes from "./routes";
+import path from "path";
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -13,6 +14,9 @@ app.use(
   })
 );
 app.use(express.json());
+
+// app.use(express.static(path.join(__dirname, "..", "public")));
+
 app.use("/", routes);
 
 export default app;
