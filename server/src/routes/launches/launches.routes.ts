@@ -4,5 +4,6 @@ import { launchesController } from "../../controllers/launches/launches.controll
 const launchRouter = Router();
 
 launchRouter.get("/", launchesController.getAllLaunches);
+launchRouter.post("/", launchesController.addNewLaunch);
 
 export default launchRouter;
