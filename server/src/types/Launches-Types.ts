@@ -3,7 +3,7 @@ export type Launches = {
   mission: string;
   rocket: string;
   launchDate: Date;
-  destination: string;
+  target: string;
   customer: string[];
   upcoming: boolean;
   success: boolean;

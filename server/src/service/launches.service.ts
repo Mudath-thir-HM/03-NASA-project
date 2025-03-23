@@ -14,9 +14,9 @@ export const launchesService = {
       !launch.mission ||
       !launch.rocket ||
       !launch.launchDate ||
-      !launch.destination
+      !launch.target
     ) {
-      throw new Error("Invalid Parameters!");
+      throw new Error("Missing required launch property");
     } else if (isNaN(new Date(launch.launchDate).getTime())) {
       throw new Error("Invalid Date");
     }

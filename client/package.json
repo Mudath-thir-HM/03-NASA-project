@@ -35,11 +35,5 @@
   },
   "overrides": {
     "nth-check@1.0.2": "2.0.1"
-  },
-  "devDependencies": {
-    "@mui/types": "^7.2.21",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "typescript": "^5.8.2"
   }
 }

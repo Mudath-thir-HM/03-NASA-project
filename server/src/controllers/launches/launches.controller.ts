@@ -4,7 +4,7 @@ import { Launches } from "../../types/Launches-Types";
 
 export const launchesController = {
   getAllLaunches(req: Request, res: Response) {
-    res.status(200).json(launchesService.parseLaunches);
+    res.status(200).json(launchesService.parseLaunches());
   },
   async addNewLaunch(req: Request, res: Response) {
     try {

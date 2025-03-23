@@ -5,7 +5,7 @@ import launchRouter from "./launches/launches.routes";
 
 const routes = Router();
 
-routes.use("/*", homeRouter);
+routes.use("/", homeRouter);
 routes.use("/planets", planetsRouter);
 routes.use("/launches", launchRouter);
 
