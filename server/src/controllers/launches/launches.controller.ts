@@ -7,11 +7,13 @@ export const launchesController = {
     res.status(200).json(launchesService.parseLaunches);
   },
   async addNewLaunch(req: Request, res: Response) {
-    const launch: Launches = await req.body;
+    try {
+      const launch: Launches = await req.body;
 
-    launch.launchDate = new Date(launch.launchDate);
-
-    launchesService.addNewLaunch(launch);
-    res.status(201).json(launch);
+      launchesService.addNewLaunch(launch);
+      res.status(201).json(launch);
+    } catch (error: any) {
+      res.status(400).json({ error: error.message });
+    }
   },
 };
