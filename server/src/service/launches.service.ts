@@ -32,4 +32,15 @@ export const launchesService = {
       })
     );
   },
+
+  deleteLaunch(launchId: number) {
+    if (!launches.has(launchId)) {
+      throw new Error("Launch not Found");
+    }
+
+    const aborted = launches.get(launchId);
+    aborted!.upcoming = false;
+    aborted!.success = false;
+    return aborted;
+  },
 };
