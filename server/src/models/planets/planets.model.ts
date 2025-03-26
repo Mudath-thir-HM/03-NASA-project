@@ -4,7 +4,6 @@ import path from "path";
 import { PlanetDataType } from "../../types/planetTypes";
 // import Promise from 'stream/promises'
 
-export const planets = [];
 export const habitablePlanets: PlanetDataType[] = [];
 
 function isHabitable(planet: PlanetDataType) {
