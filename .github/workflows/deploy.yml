@@ -1,19 +1,15 @@
 name: NASA-PROJECT
-on: push
+on: workflow_dispatch
 jobs:
   deploy:
-  runs-on: windows-latest
-  steps:
-    - name: Get Code
-      uses: actions/checkout@v4
-    - name: Install Node
-      uses: actions/setup@v4
-      with:
-        node-version: 18
-    - name: Install Dependencies
-      run: npm install
-      run: npm run install-server
-      run: npm run install-client
-    - name: Deploy app
-      run: npm run deploy
-    
+    runs-on: windows-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm run install-server
+          npm run install-client
+      - name: Deploy app
+        run: npm run deploy
