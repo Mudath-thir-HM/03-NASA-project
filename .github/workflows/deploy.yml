@@ -2,7 +2,7 @@ name: NASA-PROJECT
 on: workflow_dispatch
 jobs:
   deploy:
-  runs-on: windows-2022
+  runs-on: windows-latest
   steps:
     - name: Get Code
       uses: actions/checkout@v4
