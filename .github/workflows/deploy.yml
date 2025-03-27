@@ -1,8 +1,8 @@
 name: NASA-PROJECT
-on: workflow_dispatch
+on: push
 jobs:
   deploy:
-  runs-on: ubuntu-latest
+  runs-on: windows-latest
   steps:
     - name: Get Code
       uses: actions/checkout@v4
